@@ -13,6 +13,8 @@ jobs:
       
   my_deploy:
     runs-on: macos-latest
+    needs: [my_testing]
+    
     steps:
     - name: Show current directory
       run: pwd
