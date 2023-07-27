@@ -1,6 +1,6 @@
 name: basic-github-action
 env:
-  SHA_COMMIT : "commit sha: ${{ github.sha }}"
+  SHA_COMMIT : "${{ github.sha }}"
 
 on:
   push:
