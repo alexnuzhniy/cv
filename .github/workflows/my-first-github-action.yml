@@ -10,6 +10,8 @@ jobs:
     steps:
     - name: Print hello message
       run : echo "Hello!"
+    - name: Show current directory
+      run : pwd
       
   my_deploy:
     runs-on: macos-latest
