@@ -1,4 +1,6 @@
 name: basic-github-action
+env:
+  SHA_COMMIT : "commit sha: ${{ github.sha }}"
 
 on:
   push:
@@ -18,5 +20,7 @@ jobs:
     needs: [my_testing]
     
     steps:
-    - name: Show current directory
-      run: pwd
+    - name: Show current directory and SHA commit
+      run: |
+        pwd
+        echo "SHA commit: ${{ env.SHA_COMMIT }}" 
